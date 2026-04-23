@@ -39,7 +39,7 @@ export default function CheckOut() {
         setCode(true)
         try {
             const cartId = localStorage.getItem('cartId')
-            let { data } = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=https://amrafify.github.io/elzahraa-store`, formValues, { headers: { token: localStorage.getItem('userToken') } })
+            let { data } = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=https://amraffiy.github.io/elzahraa-store`, formValues, { headers: { token: localStorage.getItem('userToken') } })
             console.log(data);
             setMessage(data)
             if (data.status === "success") {
