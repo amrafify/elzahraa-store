@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.active {
+    color: #dc2626;
+    font-weight: bold;
+    border-bottom: #dc2626 3px solid;
+    padding-bottom: calc(var(--spacing) * 7);
+    position: relative;
+    border-radius: 0 0 2px 2px;
+}
+
+@media (width >=40rem) {
+    .active {
+        padding-bottom: calc(var(--spacing) * 3);
+    }
+}
+
+@media (width >=48rem) {
+    .active {
+        padding-bottom: calc(var(--spacing) * 4);
+    }
+}
+
+@media screen and (width < 639.26px) {
+    .active {
+        border-bottom: none;
+    }
+
+}
+
+/* لإلغاء العين في متصفح Edge */
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}
+
+/* لإلغاء أي علامات إضافية في المتصفحات المبنية على Webkit (لو ظهرت مستقبلاً) */
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+}
